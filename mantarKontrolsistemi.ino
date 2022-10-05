@@ -7,4 +7,5 @@ void setup() {
 
 void loop() {
  Serial.println(mantarSensor.temp());
+ mantarSensor.attach();
 }
