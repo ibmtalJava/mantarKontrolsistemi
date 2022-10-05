@@ -4,6 +4,7 @@ class MantarSensor{
     int tempNormalPin=0;
     int tempUpPin=0;
     int tempSensorPin=0;
+    double tempValue=0;
     MantarSensor(int tsp,int tdp,int tnp,int tup){
         tempSensorPin=tsp;
         tempDownPin=tdp;
@@ -14,6 +15,10 @@ class MantarSensor{
       pinMode(tempDownPin,OUTPUT);
       pinMode(tempNormalPin,OUTPUT);
       pinMode(tempUpPin,OUTPUT);
+    }
+    double temp(){
+       tempValue=analogRead(tempSensorPin);
+       return tempValue;
     }
   private:
 };
